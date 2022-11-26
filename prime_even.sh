@@ -34,6 +34,6 @@ check_odd_eve() {
     fi
 }
 
-# read num_from_user
-# check_odd_eve ${num_from_user}
+read num_from_user
+check_odd_eve ${num_from_user}
 
