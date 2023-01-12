@@ -14,12 +14,15 @@ then
         while (( onum != 0))
         do
                 remainder=$((onum % 10));
-                result+=$(cube $remainder);
-                onum=onum/10;
-
-
+                result=`expr $result + $(cube $remainder)`;
+                onum=$onum/10;
         done
-        echo $result
+        if (( $result == $num ))
+        then
+                echo "$num is a armstrong number.";
+        else
+                echo "$num is not a armstrong number.";
+        fi
 elif (( args >= 2))
 then
         echo "Too many argumentet";
